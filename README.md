@@ -1,0 +1,1 @@
+## Projeto de inscrição de alunos para uma universidade, usando PHP com conexão com banco de dados.
