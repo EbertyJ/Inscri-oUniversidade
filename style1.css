@@ -1,0 +1,185 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    height: 140px;
+    background-color: rgb(194, 26, 26);
+    text-align: center;
+    padding-top: 45px;
+}
+#cabecalho{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+}
+#img1{
+    height: 580px;
+    left: 400px;
+    top: 120px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+#img2{
+    height: 580px;
+    left: 700px;
+    top: 120px;
+    position: absolute;
+    z-index: 2;
+}
+
+#cadastro{
+    width: 400px;
+    height: 500px;
+    margin-left: 100px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    /*box-shadow: 0px 0px 20px 1px rgb(194, 26, 26);*/
+}
+li{
+    margin-left: 5px;
+   background-color: rgb(223, 94, 94);
+}
+#titulo{
+    color: rgb(194, 26, 26);
+    margin-top: 5px;
+    font-size: 18pt;
+}
+#botao1{
+    background-color:rgb(194, 26, 26);
+}
+#enviar{
+    background-color: rgb(194, 26, 26);
+}
+#msg2{
+    height: 100px;
+    top: 200px;
+    left: 120px;
+    z-index: 2;
+    position: absolute;
+    width: 520px;
+    text-align: center;
+    background-color: rgb(194, 26, 26);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    padding-top: 30px;
+    
+}
+#img5{
+    height: 520px;
+    z-index: 1;
+    top: 150px;
+    left: 500px;
+    position: absolute;
+}
+#botao3{
+    margin-top: 350px;
+    margin-left: 250px;
+    background-color:rgb(194, 26, 26); ;
+}
+@media (min-width: 701px) and (max-width: 1023px)
+{
+    #img1{
+        display: none;
+    } 
+    #img2{
+        height: 480px;
+        width: 640px;
+        left: 90px;
+        top: 550px;
+    }
+    #cadastro{
+        margin-left: 200px;
+    }
+    #msg2{
+        height: 100px;
+        top: 100px;
+        left: 70px;
+        width: 520px;
+    }
+    #img5{
+        height: 520px;
+        top: 250px;
+        left: 220px;
+    }
+    #botao3{
+        margin-top: 350px;
+        margin-left: 100px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1200px)
+{
+    #img1{
+        height: 480px;
+        left: 270px;
+        top: 550px;
+    } 
+    #img2{
+        height: 480px;
+        width: 640px;
+        left: 120px;
+        top: 550px;
+    }
+    #cadastro{
+        margin-left: 320px;
+    }
+    #msg2{
+        height: 100px;
+        top: 100px;
+        left: 20px;
+        width: 520px;
+        font-size: 20pt;
+        padding-top: 30px;
+    }
+    #img5{
+        height: 520px;
+        top: 250px;
+        left: 270px;
+    }
+    #botao3{
+        margin-top: 350px;
+        margin-left: 100px;
+    }
+}
+@media (min-width: 280px) and (max-width: 700px)
+{
+    header{
+        width: 710px
+    }
+    #img1{
+        display: none;
+    } 
+    #img2{
+        height: 480px;
+        width: 640px;
+        left: 70px;
+        top: 600px;
+    }
+    #cadastro{
+        margin-left: 180px;
+        margin-top: 100px;
+    }
+    #msg2{
+        height: 100px;
+        top: 100px;
+        left: 45px;
+        width: 320px;
+        font-size: 15pt;
+        padding-top: 25px;
+    }
+    #img5{
+        height: 420px;
+        top: 350px;
+        left: 0px;
+    }
+    #botao3{
+        margin-top: 250px;
+        margin-left: 80px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+   
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+	
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   
+    <title>Pré-matricula</title>
+</head>
+<body>
+  <header>
+    <p id="cabecalho">Faça sua pré-matricula e faça parte do melhor Grupo educacional do Brasil! </p>
+  </header>
+    <div id="cadastro" >
+      <!-- UL É O 1 E 2 QUE FICA ENCIMA-->
+        <ul class="pagination">
+            <li class="active" id="ponto1"><a href="#!">1</a></li>
+            <li class="waves-effect" id="ponto2"><a href="#!">2</a></li>
+        </ul>
+        <!--ID = FORM SERA ONDE MUDA O CONTEUDO DE FORMA ASSICRONA-->
+        <div id="form">
+          <!--ABAIXO O PRIMEIRO FORMULARIO-->
+        <form action="receber.php" method="POST">
+        <div class="row">
+          <p id="titulo">DADOS DO RESPONSÁVEL</p>
+            <div class="input-field col s6">
+              <input id="name" type="text" class="validate" name='nome1'>
+              <label for="first_name">Nome</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="cpf" type="number" class="validate"name='cpf'>
+                <label for="cpf">CPF</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate"name='email'>
+                <label for="email">email</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="numero" type="number" class="validate"name='numero'> 
+                <label for="numero">Numero</label>
+              </div>
+              <button class="btn waves-effect waves-light" type="submit" name="action" id="botao1">Próximo
+              </button>
+            </div>
+        </form>
+        </div>
+
+
+    </div>
+                   
+  
+    <img id="img1" src="img/estudante1 (2).jpg" alt="">
+    <img id="img2" src="img/estudanre2.png" alt="">
+
+</body>
+<script>
+  //PRIMEIRO ENVIO DOS DADOS DO RESPONSAVEL
+  $("#botao1").click(function(){
+    //IMPEDIR O RECARREGAMENTO 
+    event.preventDefault()
+    //TROCA DE COR DO 1 E 2
+    $("#ponto1").removeClass("active");
+    $("#ponto2").addClass("active");
+  //INICIO DA REQUISIÇÃO
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "cadastrar.php", true);
+  xhttp.onreadystatechange = function() {
+   
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("form").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.send();
+  //ELA APONTA PRA CADASTRAR.PHP E O Q RECEBE JOGA NA DIV COM ID FORM
+})
+
+
+
+
+</script>
+</html>
